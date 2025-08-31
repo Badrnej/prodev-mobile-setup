@@ -43,26 +43,34 @@ La commande `npm run reset-project` a été exécutée avec les effets suivants 
 
 ### Fonctionnement attendu
 D'après la documentation, cette commande devrait :
-- Déplacer le répertoire `app/` actuel vers `app-example/`
-- Créer un nouveau répertoire `app/` minimal
+- Déplacer le répertoire `app/` actuel vers `app-example/app`
+- Déplacer tous les composants, hooks, constants et scripts vers `app-example/`
+- Créer un nouveau répertoire `app/` minimal avec seulement `index.tsx` et `_layout.tsx`
 - Permettre de repartir avec une structure propre
 
 ### Résultats observés
 - Le script a demandé confirmation pour déplacer les fichiers vers `/app-example`
-- Après confirmation (Y), le script s'est exécuté
-- La structure de `app/` a été simplifiée
-- Les onglets par défaut et composants complexes ont été maintenus mais nettoyés
+- Après confirmation (Y), le script s'est exécuté avec succès
+- L'ancien contenu de `app/` a été déplacé vers `app-example/app/`
+- Les dossiers `components/`, `hooks/`, `constants/` et `scripts/` ont été déplacés vers `app-example/`
+- Un nouveau dossier `app/` simple a été créé avec seulement `index.tsx` et `_layout.tsx`
 
 ### Structure après reset
 ```
 app/
-├── (tabs)/
-├── +not-found.tsx
-└── _layout.tsx
+├── index.tsx (écran principal simplifié)
+└── _layout.tsx (layout de base)
+
+app-example/
+├── app/ (ancienne structure avec onglets)
+├── components/ (composants réutilisables)
+├── hooks/ (hooks personnalisés)
+├── constants/ (constantes de l'application)
+└── scripts/ (scripts utilitaires)
 ```
 
 ### Conclusion
-La commande `reset-project` permet de nettoyer le projet en supprimant les exemples et modèles par défaut, offrant une base plus propre pour commencer le développement. Elle prépare l'application pour une construction personnalisée sans les éléments de démonstration.
+La commande `reset-project` permet de nettoyer le projet en déplaçant tous les exemples et modèles par défaut vers `app-example/`, offrant une base très propre pour commencer le développement. L'écran principal devient un simple `app/index.tsx` sans navigation par onglets, idéal pour débuter un nouveau projet.
 
 ## Fichiers modifiés
-- **app/(tabs)/index.tsx** : Texte changé de "Welcome!" vers "** First App Created**"
+- **app/index.tsx** : Texte changé de "Edit app/index.tsx to edit this screen." vers "** First App Created**"

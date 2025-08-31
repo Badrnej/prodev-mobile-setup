@@ -5,7 +5,7 @@ echo ""
 
 PROJECT_DIR="/Users/badrnejaa/Desktop/alxprodev/prodev-mobile-setup/prodev-mobile-app-0x00"
 
-# 1. Vérification du fichier app-example/app/(tabs)/index.tsx
+# 1. Vérification que app-example/app/(tabs)/index.tsx EXISTE
 echo "1. Vérification de app-example/app/(tabs)/index.tsx"
 FILE1="${PROJECT_DIR}/app-example/app/(tabs)/index.tsx"
 if [ -f "$FILE1" ]; then
@@ -41,9 +41,9 @@ else
 fi
 echo ""
 
-# 3. Vérification de l'écran principal app/(tabs)/index.tsx
-echo "3. Vérification de l'écran principal app/(tabs)/index.tsx"
-FILE3="${PROJECT_DIR}/app/(tabs)/index.tsx"
+# 3. Vérification de l'écran principal app/index.tsx (après reset)
+echo "3. Vérification de l'écran principal app/index.tsx"
+FILE3="${PROJECT_DIR}/app/index.tsx"
 if [ -f "$FILE3" ]; then
     echo "   ✅ Le fichier existe"
     echo "   📏 Taille: $(wc -l < "$FILE3") lignes"
@@ -59,6 +59,16 @@ else
 fi
 echo ""
 
+# 4. Vérification du fichier app-example/constants/Colors.tsx
+echo "4. Vérification de app-example/constants/Colors.tsx"
+FILE4="${PROJECT_DIR}/app-example/constants/Colors.tsx"
+if [ -f "$FILE4" ]; then
+    echo "   ✅ Le fichier existe"
+    echo "   📏 Taille: $(wc -l < "$FILE4") lignes"
+else
+    echo "   ❌ Le fichier n'existe pas"
+fi
+echo ""
+
 echo "=== RÉSUMÉ ==="
-echo "Tous les fichiers requis existent et contiennent le bon contenu."
-echo "Le rapport d'erreur semble incorrect."
+echo "Validation terminée. Vérifiez que tous les éléments sont ✅"
