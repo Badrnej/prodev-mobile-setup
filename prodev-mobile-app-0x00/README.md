@@ -1,76 +1,50 @@
-# Première Application Mobile - prodev-mobile-app-0x00
+# Welcome to your Expo app 👋
 
-## Objectif
-Configuration de la première application mobile utilisant le template Expo Router pour comprendre la structure d'un projet React Native avec Expo.
+This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
-## Étapes suivies pour le scaffolding
+## Get started
 
-### 1. Navigation vers le répertoire du projet
-```bash
-cd prodev-mobile-setup
-```
+1. Install dependencies
 
-### 2. Initialisation du projet Expo
-```bash
-npx create-expo-app@latest .
-```
-Cette commande a créé un projet Expo avec la structure suivante :
-- `app/` : Répertoire principal contenant les écrans
-- `app/(tabs)/` : Structure de navigation par onglets
-- `assets/` : Ressources (images, polices, etc.)
-- `components/` : Composants réutilisables
-- `constants/` : Constantes de l'application
+   ```bash
+   npm install
+   ```
 
-### 3. Modification de l'écran d'accueil
-- Ouverture de `app/(tabs)/index.tsx`
-- Localisation du texte par défaut "Welcome!"
-- Modification en "** First App Created**"
+2. Start the app
 
-### 4. Test de l'application
-```bash
-npx expo start
-```
-L'application s'est lancée avec succès et a généré un code QR pour tester sur un appareil physique via Expo Go.
+   ```bash
+   npx expo start
+   ```
 
-### 5. Commande reset-project
+In the output, you'll find options to open the app in a
+
+- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
+- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
+- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
+- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+
+You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+
+## Get a fresh project
+
+When you're ready, run:
+
 ```bash
 npm run reset-project
 ```
 
-## Observations de la commande reset-project
+This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
 
-La commande `npm run reset-project` a été exécutée avec les effets suivants :
+## Learn more
 
-### Fonctionnement attendu
-D'après la documentation, cette commande devrait :
-- Déplacer le répertoire `app/` actuel vers `app-example/app`
-- Déplacer tous les composants, hooks, constants et scripts vers `app-example/`
-- Créer un nouveau répertoire `app/` minimal avec seulement `index.tsx` et `_layout.tsx`
-- Permettre de repartir avec une structure propre
+To learn more about developing your project with Expo, look at the following resources:
 
-### Résultats observés
-- Le script a demandé confirmation pour déplacer les fichiers vers `/app-example`
-- Après confirmation (Y), le script s'est exécuté avec succès
-- L'ancien contenu de `app/` a été déplacé vers `app-example/app/`
-- Les dossiers `components/`, `hooks/`, `constants/` et `scripts/` ont été déplacés vers `app-example/`
-- Un nouveau dossier `app/` simple a été créé avec seulement `index.tsx` et `_layout.tsx`
+- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
+- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
 
-### Structure après reset
-```
-app/
-├── index.tsx (écran principal simplifié)
-└── _layout.tsx (layout de base)
+## Join the community
 
-app-example/
-├── app/ (ancienne structure avec onglets)
-├── components/ (composants réutilisables)
-├── hooks/ (hooks personnalisés)
-├── constants/ (constantes de l'application)
-└── scripts/ (scripts utilitaires)
-```
+Join our community of developers creating universal apps.
 
-### Conclusion
-La commande `reset-project` permet de nettoyer le projet en déplaçant tous les exemples et modèles par défaut vers `app-example/`, offrant une base très propre pour commencer le développement. L'écran principal devient un simple `app/index.tsx` sans navigation par onglets, idéal pour débuter un nouveau projet.
-
-## Fichiers modifiés
-- **app/index.tsx** : Texte changé de "Edit app/index.tsx to edit this screen." vers "** First App Created**"
+- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
+- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.

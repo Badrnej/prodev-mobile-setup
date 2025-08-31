@@ -1,38 +1,45 @@
-# Configuration de l'environnement de développement mobile
+# Mobile Development Setup
 
-## Objectif
-Configuration d'un environnement de développement mobile utilisant React Native avec Expo Framework pour assurer une expérience de développement fluide.
+## Environment Setup Process
 
-## Prérequis installés
-✅ Node.js LTS (version 16 ou supérieure)  
-✅ VS Code (IDE recommandé)  
-✅ macOS (système d'exploitation compatible)  
+### Prerequisites Checklist
+- ✅ Node.js LTS installed
+- ✅ VS Code (recommended IDE)
+- ✅ Windows OS
+- 📱 Expo Go app installation (next step)
 
-## Installation d'Expo Go
+### Expo Go Installation Steps
 
-### Pourquoi Expo Go ?
-Expo Go offre une solution économique permettant de tester et d'exécuter des applications React Native directement sur un appareil physique, prenant en charge iOS et Android de manière transparente, sans avoir besoin d'émulateurs coûteux.
+1. **Visit Expo Go Homepage**: https://expo.dev/go
+2. **Select Latest SDK Version**: Choose the most recent stable version
+3. **Install Expo Go**:
+   - **Android**: Install from Google Play Store
+   - **iOS**: Install from Apple App Store
+4. **Open Expo Go App**: Launch the app on your device
+5. **Create Account**: Sign up for a new account or log in with existing credentials
 
-### Étapes d'installation
-1. **Visite du site officiel :** https://expo.dev/go
-2. **Sélection de la dernière version SDK**
-3. **Installation sur l'appareil :**
-   - **Android :** Installation depuis Google Play Store
-   - **iOS :** Installation depuis Apple App Store
-4. **Ouverture de l'application Expo Go**
-5. **Création d'un compte ou connexion**
+### Setup Challenges and Solutions
 
-### Défis rencontrés et solutions
-- **Connexion réseau :** S'assurer que l'appareil mobile et l'ordinateur de développement sont sur le même réseau Wi-Fi
-- **Permissions :** Autoriser l'accès à la caméra pour scanner les codes QR
-- **Compatibilité :** Vérifier que la version d'Expo Go est compatible avec la version SDK utilisée
+During the setup process, I documented the following:
 
-### Avantages d'Expo Go
-- Test instantané sur appareil physique
-- Pas besoin d'émulateurs
-- Support multiplateforme (iOS/Android)
-- Rechargement à chaud (Hot Reload)
-- Débogage facilité
+- **Challenge**: Ensuring Node.js version compatibility
+  - **Solution**: Verified Node.js LTS version (v16+) is installed
+  
+- **Challenge**: Understanding Expo Go vs traditional emulators
+  - **Solution**: Expo Go provides a cost-effective alternative to maintaining multiple device emulators, supporting the ever-evolving mobile ecosystem from iPhone 7 to iPhone 16 Pro Max and various Android devices
 
-### Prochaines étapes
-Avec Expo Go configuré, nous sommes prêts à commencer le développement d'applications mobiles React Native et à tester nos applications directement sur nos appareils physiques.
+### Why Expo Go?
+
+Expo Go offers several advantages:
+- **Cost-effective**: No need for expensive hardware to test on multiple devices
+- **Real device testing**: Test on actual hardware for authentic user experience
+- **Cross-platform**: Seamless support for both iOS and Android
+- **Quick iteration**: Instant updates and hot reloading for faster development cycles
+
+### Next Steps
+
+1. Proceed to create the first mobile app using Expo Router template
+2. Test the development workflow with Expo Go
+3. Explore React Native components and styling
+
+---
